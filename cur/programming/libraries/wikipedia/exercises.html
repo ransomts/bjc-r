@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/bjc-r/llab/loader.js"></script>
+        <title>Wikipedia Exercises</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176402054-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-176402054-1');
+        </script>
+    </head>
+    <body>
+        <h3>Quiz: Understanding the Wikipedia API</h3>
+        
+        <!-- Question 1 -->
+        <div class="assessment-data" type="multiplechoice" identifier="api-purpose"
+                 hasinlinefeedback="true" maxchoices="1">
+                
+                <div class="prompt">      
+                    <p>1. What is the primary purpose of the Wikipedia API?</p>
+                </div>
+                
+                <div class="choice" identifier="data-retrieval">
+                    <div class="text">
+                        <p>A) To retrieve data from Wikipedia such as texts, sections, links, and categories.</p>
+                    </div>
+                    <div class="feedback">
+                        Correct!
+                    </div>
+                </div>
+                
+                <div class="choice" identifier="data-editing">
+                    <div class="text">
+                        <p>B) To edit and update existing Wikipedia pages.</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. The Wikipedia API is mainly for data retrieval, not editing.
+                    </div>
+                </div>
+
+                <div class="choice" identifier="account-creation">
+                    <div class="text">
+                        <p>C) To create user accounts on Wikipedia.</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. Account management is not the primary purpose of the Wikipedia API.
+                    </div>
+                </div>
+            </div>
+
+        <!-- Question 2 -->
+        <div class="assessment-data" type="multiplechoice" identifier="api-installation"
+                 hasinlinefeedback="true" maxchoices="1">
+                
+                <div class="prompt">      
+                    <p>2. How do you install the Wikipedia API Python wrapper?</p>
+                </div>
+                
+                <div class="choice" identifier="pip-install">
+                    <div class="text">
+                        <p>A) pip install wikipedia-api</p>
+                    </div>
+                    <div class="feedback">
+                        Correct!
+                    </div>
+                </div>
+                
+                <div class="choice" identifier="npm-install">
+                    <div class="text">
+                        <p>B) npm install wikipedia-api</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. npm is used for Node.js packages, not Python libraries.
+                    </div>
+                </div>
+
+                <div class="choice" identifier="apt-get-install">
+                    <div class="text">
+                        <p>C) apt-get install wikipedia-api</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. apt-get is used for Debian-based Linux distributions, not for installing Python libraries.
+                    </div>
+                </div>
+            </div>
+
+            <h3>Quiz: Predicting the Output of Wikipedia API Code</h3>
+        
+            <!-- Python Code Snippet -->
+            <pre><code>
+    import wikipediaapi
+    wiki_wiki = wikipediaapi.Wikipedia('english')
+    page = wiki_wiki.page('tottenham')
+    print("Page - Exists: %s" % page.exists())
+            </code></pre>
+            
+            <!-- Question 3-->
+            <div class="assessment-data" type="multiplechoice" identifier="page-exists-output"
+                 hasinlinefeedback="true" maxchoices="1">
+                
+                <div class="prompt">      
+                    <p>What will be the output of the above code?</p>
+                </div>
+                
+                <div class="choice" identifier="output-true">
+                    <div class="text">
+                        <p>A) Page - Exists: True</p>
+                    </div>
+                    <div class="feedback">
+                        Correct! Since the page 'tottenham' exists on Wikipedia, the output will affirm its existence.
+                    </div>
+                </div>
+                
+                <div class="choice" identifier="output-false">
+                    <div class="text">
+                        <p>B) Page - Exists: False</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. If the 'tottenham' page did not exist, this would be the output. However, the page does exist on Wikipedia.
+                    </div>
+                </div>
+    
+                <div class="choice" identifier="output-error">
+                    <div class="text">
+                        <p>C) Error: Page not found</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. The Wikipedia API does not throw an error for non-existent pages; it returns False for the 'exists' method.
+                    </div>
+                </div>
+    
+                <div class="choice" identifier="output-none">
+                    <div class="text">
+                        <p>D) None</p>
+                    </div>
+                    <div class="feedback">
+                        Incorrect. The 'exists' method will always return a boolean value, not None.
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

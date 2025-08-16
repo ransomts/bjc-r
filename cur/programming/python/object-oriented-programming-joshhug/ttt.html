@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="/bjc-r/llab/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Explanation</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+</head>
+
+<body>
+    <h1>TicTacToe Class Description</h1>
+    <p>
+        The <code>TicTacToe</code> class represents a standard Tic Tac Toe game. The game consists of a 3x3 board where
+        two players, typically represented as "X" and "O", take turns marking the spaces in a grid. The player who
+        succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+    </p>
+
+    <p>
+        To win in Tic Tac Toe, a player must have three of their symbols (either <code>X</code> or <code>O</code>) consecutively in a row. This can be achieved in the following ways:
+    </p>
+    
+  
+    <img src="/bjc-r/img/python/ttt.png"/>
+
+    <h2>Methods to Implement</h2>
+    <p>Students are required to implement the following methods:</p>
+        <ul>
+            <li><code>do_move</code>: Make a move on the board</li>
+            <li><code>is_valid_move</code>: Check if a move is valid</li>
+            <li><code>check_game_over</code>: Check if the game is over</li>
+        </ul>
+    <p>
+        Once these methods are implemented correctly, the <code>play_game</code> function will allow you to play a
+        complete game of Tic Tac Toe in the console.
+    </p>
+
+    <h2>Explanation of the Double For Loop List Comprehension</h2>
+    <p>
+        The list comprehension used to initialize the board is a concise way to create a 3x3 grid with all spaces
+        empty. The outer loop iterates through the rows, and the inner loop iterates through the columns.
+    </p>
+    <code>[[self.EMPTY for _ in range(3)] for _ in range(3)]</code>
+    <p>
+        This double for-loop list comprehension creates a list of three lists, where each inner list contains three
+        EMPTY spaces, effectively creating a 3x3 grid.
+    </p>
+
+    <p>This can be equivalently expressed using two nested for loops:</p>
+    <pre><code>
+        board = []
+    </code>
+</pre>
+
+        <pre><code>
+        for _ in range(3):
+            row = []
+            for _ in range(3):
+                row.append(self.EMPTY)
+            board.append(row)
+        </code>
+    </pre>
+
+    <h1>Implementing <code>do_move</code> in Tic Tac Toe</h1>
+
+<p>The <code>do_move</code> function is responsible for handling the player's move. Here's a breakdown of how to implement it:</p>
+
+<h2>1. Check Validity of the Move:</h2>
+First, implement <code>is_valid_move</code>. Use this method in <code>do_move</code>.
+ In this method: 
+<ul>
+    <li>Ensure the chosen cell is within the boundaries of the board.</li>
+    <li>Ensure the chosen cell is unoccupied (i.e., it doesn't already contain <code>X</code> or <code>O</code>).</li>
+    
+</ul>
+
+<h2>2. Update the Board:</h2>
+<ul>
+    <li>Assign the current player's <code>self.current_player</code> symbol (<code>X</code> or <code>O</code>) to the chosen cell.</li>
+    <li>Return <code>True</code> if we successfully updated the game board and <code>False</code> otherwise.</li>
+</ul>
+
+
+
+    <h2>Instructions to Play</h2>
+    <p>
+        Once the three methods are implemented, you can run the <code>play_game()</code> function to start the game.
+        Players will be prompted to input their moves in the format of row and column separated by a space. The game
+        will continue until a player wins or all cells are filled, resulting in a tie.
+    </p>
+    <p>Have fun implementing and playing Tic Tac Toe! This game is a great example of a program you can create for your final project
+        if you decide to use Python!
+    </p>
+</body>
+
+</html>
